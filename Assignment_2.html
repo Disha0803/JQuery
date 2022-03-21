@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    #div{
+        background-color: teal;
+        height: 200px;
+        width: 400px;
+        padding: 20px;
+        margin-left: 600px;
+        color: whitesmoke;
+    }
+</style>
+<body>
+    <div id="div">
+        <div id="div1">
+            <!-- <p>This is text</p> -->
+            Enter your password: <input type="password" id="input">
+            <br><br>
+            <input type="checkbox" name="abc" id="chkbox">show password
+        </div>
+    </div>
+    <script>
+            $("#chkbox").change(function(){
+              var pass=$("#input");
+              if(pass.attr('type')==='password')
+              pass.attr('type','text')
+              else
+              pass.attr('type','password')
+            });
+    </script>
+</body>
+</html>

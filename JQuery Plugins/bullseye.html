@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="Bullseye/styles/jquery.bullseye.css">
+    <link rel="stylesheet" href="Bullseye/styles/jquery.normalise.css">
+    <link rel="stylesheet" href="Bullseye/styles/jquery.style.css">
+    <script src="Bullseye/src/jquery.bullseye.js"></script>
+</head>
+<body>
+    <div class="demo" align="center">
+        <img src="6.jpg" height="" width="" alt="">
+      </div>
+      <script>
+          $('.demo').bullseye({
+  top: 10, // Determines bullseye position from top.
+  left:500, // Determines bullseye position from left.
+  bottom: 0, // Determines bullseye position from bottom.
+  right: 10, // Determines bullseye position from right.
+  heading: "Hello There", // Heading content
+  content: "Welcome", // Paragraph content
+  orientation: "left", // <a href="https://www.jqueryscript.net/tooltip/">Tooltip</a> orientation
+  color: "#fzff", // Dot and dot animation color. 
+  onHoverMarkAsRead: true
+}).bullseye({
+  bottom: 30,
+  right: 4,
+  heading: "hi",
+  content: "everyone",
+  color: "#fff",
+  orientation: "right"
+}).bullseye({
+  left: 500,
+  bottom: 50,
+  heading: "beautiful",
+  content: "scenery",
+  orientation: "bottom",
+  color: "#fff"
+});
+      </script>
+</body>
+</html>

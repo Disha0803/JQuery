@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+  <div>a</div>
+  <script>
+  $("div").click(function() {
+    $("div").append("a");
+    $("div").off("click");
+  });
+  </script>
+  
+  
+
+<!-- <div>1</div>
+<script>
+$("div").click(function() {
+  $("div").text($("div").text()+1);
+});
+</script> -->
+
+<!-- <div><p>1</p></div>
+<div>2</div>
+<script>
+alert($("p").parent().siblings().eq(0).text());
+</script> -->
+   <!-- <p></p> -->
+<!-- <script>
+// $("p").height(84);
+// $("p").css("margin", 8);
+// $("p").css("padding", 2);
+//   alert($("p").outerHeight());
+
+</script> -->
+</body>
+</html>

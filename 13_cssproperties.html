@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    #box{
+        height: 200px;
+        width: 200px;
+        border: 2px coral solid;
+        background-color: cornflowerblue;
+    }
+</style>
+<body>
+    <div id="box"></div>
+        <br><br>
+    <button id="btn">Click Me</button>
+    <script>
+        //get css property
+        //     $("#btn").click(function(){
+        //       var data=$("#box").css("background-color");
+        //       alert(data);
+        //     });
+        //set css property
+            // $("#btn").click(function(){
+            //   $("#box").css("background-color","blueviolet");
+            // });
+        //set multiple css property
+        $("#btn").click(function(){
+              $("#box").css({
+                  "background-color":"greenyellow",
+                  "border":"5px black dashed"
+              });
+            });
+    </script>
+</body>
+</html>

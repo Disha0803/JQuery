@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tab-testimonial/style.css">
+</head>
+<style>
+    .testimonial-section {
+  width: 800px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-section h1 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.testimonial-pic img {
+  width: 100px;
+  filter: grayscale(1);
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.testimonial-pic img.active {
+  filter: grayscale(0);
+  border-radius: 50%;
+}
+
+.testimonial .content {
+  display: none;
+}
+
+.testimonial .content.active {
+  display: block;
+}
+
+.testimonial .content p:nth-child(2) {
+  font-weight: bold;
+}
+</style>
+<body>
+    <div class="testimonial-section">
+        <h1>Great Writers of India</h1>
+        <!-- Images -->
+        <div class="testimonial-pic">
+            <img class="active" src="tab-testimonial/images/face-1.jfif" height="200px" width="250px"data-alt="tab1">
+            <img src="tab-testimonial/images/face-2.jpg" height="200px" width="250px" data-alt="tab2">
+            <img src="tab-testimonial/images/face-3.jfif" height="200px" width="250px" data-alt="tab3">
+            <img src="tab-testimonial/images/face-4.jfif" height="200px" width="250px" data-alt="tab4">
+        </div>
+        <!-- Testimonial Text -->
+        <div class="testimonial">
+          <div class="content active" id="tab1">
+            <p>Arundhati Roy, full name Suzanna Arundhati Roy, (born November 24, 1961, Shillong, Meghalaya, India), Indian author, actress, and political activist who was best known for the award-winning novel The God of Small Things (1997) and for her involvement in environmental and human rights causes.</p>
+            <p>Arundhati Roy</p>
+          </div>
+          <div class="content" id="tab2">
+            <p>Devdutt Pattanaik is an Indian mythologist, speaker, illustrator and author, known for his writing on Hindu sacred lore, legends, folklore, fables and parables. His work focuses largely on the areas of religion, mythology, and management.</p>
+            <p>Debdutt Pattanaik</p>
+          </div>
+          <div class="content" id="tab3">
+            <p>Vikram Seth, (born June 20, 1952, Calcutta [now Kolkata], India), Indian poet, novelist, and travel writer known for his verse novel The Golden Gate (1986) and his epic novel A Suitable Boy (1993). The son of a judge and a businessman, Seth was raised in London and India.</p>
+            <p>Vikram Seth</p>
+          </div>
+          <div class="content" id="tab4">
+            <p>R. K. Narayan was born on 10 October 1906 and passed away in 2001. In his long career he published fourteen novels, over two hundred short stories, a memoir, two travel books, innumerable essays, and two plays. His first novel was Swami and Friends (1935).</p>
+            <p>R.K. Narayan</p>
+          </div>
+        </div>
+      </div>
+      <script>
+          $('.testimonial-pic img').click(function () {
+
+$(this).addClass('active')
+$(this).siblings().removeClass('active')
+
+$('.testimonial .content').removeClass('active')
+$('#' + $(this).attr('data-alt')).addClass('active')
+
+})
+      </script>
+</body>
+</html>
